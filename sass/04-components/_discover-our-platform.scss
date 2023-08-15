@@ -1,0 +1,181 @@
+@use '../02-tools/mixins';
+@use '../03-generic/breakpoints';
+
+/**
+ * Discouver our platform block
+*/
+
+.discover-our-platform {
+    
+    background-color: var(--global--blanc-floral-100);
+
+    &__container {
+        display: flex;
+        align-items: center;
+
+        max-width: 1188px; /*fallback*/
+        max-width: 83.369%; 
+        margin: 0 auto;
+        padding: 0px 50px 0px 50px;
+
+        @include breakpoints.tablet-only {
+            align-items: flex-start;
+            padding: 50px 20px 0px 150px;
+        }
+        @include breakpoints.mobile-only {
+            padding: 50px 15px 0px 15px;
+            flex-direction: column;
+        }
+
+        &_fullscreen {
+            min-height: 100vh;
+        }
+
+    }
+
+    &__content {
+        position: relative;
+        z-index: 2;
+
+        width: 734px; /*fallback*/
+        width: 100%; 
+
+        @include breakpoints.tablet {
+            // width: 61.8%; 
+            min-width: 61.8%;;
+        }
+    }
+}
+
+.content-block {
+
+    &__title {
+        margin: 0;
+
+        @include mixins.display-H1;
+        @include breakpoints.tablet-only {
+           font-size: 2.5rem;
+        }
+        @include breakpoints.mobile-only {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__text {
+        color: var(--global--vert-foret-sombre-50); 
+
+        @include mixins.title-regular-H2;
+        @include breakpoints.laptop {
+            width: 625px; /*fallback*/ 
+            width: 85.13%;
+        }
+    }
+}
+
+.buttons-container {
+    display: flex;
+    gap: 20px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 168px;
+    height: 52px;
+  
+    border: 1px solid var(--global--vert-foret-sombre-25);
+    border-radius: 6px;
+    background-color: var(--global--blanc-fantome-100);
+    transition: background-color 0.3s ease 0s;
+    
+    text-decoration: none;
+    color: var(--global--vert-foret-sombre-100);
+
+
+    @include mixins.display-H4;
+    @include breakpoints.mobile-only{
+        font-size: 0.7rem;
+    }
+    @include breakpoints.hover-devices {
+        &:hover {
+            background-color: var(--global--pomme-granny-100);
+        }
+    }
+
+    &:active {
+        background-color: var(--global--pomme-granny-100);
+        transform: scale(0.9);
+        transition: transform 200ms;
+    }
+}
+
+/*animation*/
+.animated-create {
+    position: relative;
+
+    &:hover &__images {
+        animation-play-state: paused;
+    }
+    &:focus-within &__images {
+        animation-play-state: paused;
+    }
+
+    &__hand1, &__hand2, &__brick {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+    &__body {
+        width: 602px;
+        position: relative;
+        z-index: 1;
+    }
+    &__hand1 {
+        width: 100px;
+        transform: translate(-285px, 215px) rotate(-10deg);
+        z-index: 2;
+        animation: animated-hand1 5s  infinite;
+    }
+    &__hand2 {
+        width: 167px;
+        transform: translate(-240px, 210px);
+        transform: translate(-231px, 218px) rotate(0deg);
+        animation: animated-hand2 3s  infinite;
+    }
+    &__brick {
+        width: 97px;
+        transform: translate(-230px, 240px);
+        animation: animated-brick 5s  infinite;
+    }
+
+    transform: translate(-132px, -68px);
+
+    @include breakpoints.tablet {
+        transform: translate(-278px, 358px);
+    }
+    @include breakpoints.laptop {
+        transform: translate(-211px, 150px);
+    }
+    @include breakpoints.desktop {
+        transform: none;
+    }
+}
+
+@keyframes animated-hand1 {
+    0% {transform: translate(-285px, 215px) rotate(-20deg);}
+    50% {transform: translate(-285px, 215px) rotate(0deg);}
+    100% {transform: translate(-285px, 215px) rotate(-20deg);}
+}
+
+@keyframes animated-hand2 {
+    0% {transform: translate(-231px, 218px) rotate(-20deg);}
+    50% {transform: translate(-231px, 218px) rotate(0deg);}
+    100% {transform: translate(-231px, 218px) rotate(-20deg);}
+}
+@keyframes animated-brick {
+    0% {transform: translate(-230px, 206px);}
+    50% {transform: translate(-230px, 240px);}
+    100% {transform: translate(-230px, 206px);}
+}

@@ -1,0 +1,76 @@
+@use '../02-tools/mixins';
+@use '../03-generic/breakpoints';
+
+/**
+ * Footer 
+*/
+
+.footer {
+
+    background-color: var(--global--vert-foret-sombre-100);
+    
+    @include breakpoints.mobile-only {
+        background-color: black;
+    }
+    
+    &__container {
+        display: grid;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+
+        @include breakpoints.mobile-only {
+            grid-template-columns: 1fr;
+            justify-content: center;
+        }
+
+        min-height: 131px;
+
+        max-width: 1188px; /*fallback*/
+        max-width: 83.369%; 
+        margin: 0 auto;
+
+              @include breakpoints.tablet-only {
+            // padding: 50px 20px 0px 150px;
+            padding: 0px 20px 0px 150px;
+        }
+        @include breakpoints.mobile-only {
+            // padding: 50px 15px 0px 15px;
+            padding: 0px 15px 100px 15px;
+        }
+    }
+    &__logo {
+        max-width: 136px;
+
+        @include breakpoints.mobile-only {
+            display: none;
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__links {
+        justify-self: end;
+        display: flex;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+
+        @include breakpoints.laptop-only {
+            gap: 15px;
+        }
+
+        a {
+            @include mixins.title-regular-H3;
+            color: var(--global--vert-foret-sombre-50);
+            text-decoration: none;
+            @include breakpoints.tablet-only {
+                font-size: 1rem;
+            }
+            @include breakpoints.mobile-only {
+                font-size: 0.8rem;
+            }
+        }
+    }
+}

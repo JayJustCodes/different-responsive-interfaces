@@ -1,0 +1,41 @@
+//** SETTINGS
+
+//## Global...............Project-specific, globally available variables.
+@use '01-settings/global'; 
+
+
+//** TOOLS
+
+//## Mixins...............Global mixins.
+@use '02-tools/_mixins';
+
+
+
+//** GENERIC
+
+//## Page style...............General Page Style rules (body, html, wrapper).
+@use '03-generic/_page-style';
+
+//## Breakpoints...............Mixins and variables for responsive styles.
+@use '03-generic/_breakpoints';
+
+
+//** COMPONENTS
+
+//## Header...............Header styles.
+@use '04-components/header';
+
+///## "Discover our platform"...............Specific styles for this block..
+@use '04-components/discover-our-platform';
+
+///## "Be ready"...............Specific styles for this block..
+@use '04-components/be-ready';
+
+///## "All you need"...............Specific styles for this block..
+@use '04-components/all-you-need';
+
+///## "Connect you"...............Specific styles for this block..
+@use '04-components/connect-you';
+
+//## Footer...............Footer styles.
+@use '04-components/footer';

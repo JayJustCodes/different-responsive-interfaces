@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krona+One&family=Rubik:wght@400;700&display=swap" rel="stylesheet">
+    <script async src="js/stickyNavigationBar.js"></script>
+    <script async src="js/showPasswordEye.js"></script>
+    <title>Different responsive interfaces</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__container">
+                <div class="header__top-bar logo-bar">
+                    <div class="header__logo logo">
+                        <img src="images/header/logo.png" alt="logo" width="125">
+                    </div>
+                </div>
+                <div class="header__navigation-bar navigation-bar">
+                    <div class="header__menu navigation-menu">
+                        <ul class="navigation-menu__list">
+                            <li class="navigation-menu__item"> 
+                                    <input class="dropdown-checkbox1 default-checkbox" id="dropdown-checkbox1" type="checkbox">
+                                    <label class="nav-dropdown-menu dropdown-icon-connexion" for="dropdown-checkbox1"></label>
+                                    <a class="navigation-menu__icon" href="#connexion-page-block">
+                                        <span>
+                                            <img src="images/header/icone_connexion.svg" alt="menu icon">
+                                        </span>
+                                    </a>
+                                    <h4 class="navigation-menu__title"><a class="navigation-menu__link" href="#connexion-page-block">Connexion</a></h4>
+                            </li>
+                            <li class="navigation-menu__item">
+                                <input class="dropdown-checkbox2 default-checkbox" id="dropdown-checkbox2" type="checkbox">
+                                <label class="nav-dropdown-menu dropdown-icon-courses" for="dropdown-checkbox2"></label>
+                                <a class="navigation-menu__icon" href="#">
+                                    <span>
+                                        <img src="images/header/icone_formations.svg" alt="menu icon">
+                                    </span>
+                                </a>
+                                <h4 class="navigation-menu__title"><a class="navigation-menu__link" href="#">Nos formations</a></h4>
+                            </li>
+                            <li class="navigation-menu__item">
+                                <input class="dropdown-checkbox3 default-checkbox" id="dropdown-checkbox3" type="checkbox">
+                                <label class="nav-dropdown-menu dropdown-icon-help" for="dropdown-checkbox3"></label>
+                                <a class="navigation-menu__icon" href="#">
+                                    <span>
+                                        <img src="images/header/icone_aide.png" alt="menu icon">
+                                    </span>
+                                </a>
+                                <h4 class="navigation-menu__title"><a class="navigation-menu__link" href="#">Aide</a></h4>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="discover-our-platform">
+                <div class="discover-our-platform__container discover-our-platform__container_fullscreen">
+                    <div class="discover-our-platform__content content-block">
+                        <h1 class="content-block__title">Notre plateforme d’apprentissage <br/> en ligne.</h1>
+                        <p class="content-block__text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos omnis reiciendis, dignissimos perferendis dolorum maxime.</p>
+                        <div class="content-block__buttons buttons-container">
+                            <a class="content-block__button buttons connexion-button" href="#">Se connecter</a>
+                            <a class="content-block__button buttons discover-button" href="#">Découvrir</a>
+                        </div>
+                    </div>
+                    <div class="discover-our-platform__image animated-create test">
+                        <img class="animated-create__images animated-create__body" src="images/animated/discover/illustration_body.svg" alt="illustration creer son entreprise" width="0">
+                        <img class="animated-create__images animated-create__hand1" src="images/animated/discover/illustration_hand1.svg" alt="illustration creer son entreprise" width="0">
+                        <img class="animated-create__images animated-create__hand2" src="images/animated/discover/illustration_hand2.svg" alt="illustration creer son entreprise" width="0">
+                        <img class="animated-create__images animated-create__brick" src="images/animated/discover/brick.svg" alt="illustration creer son entreprise" width="0">
+                    </div>
+                </div>
+            </section>
+            <section class="be-ready">
+                <div class="be-ready__container be-ready__container_fullscreen">
+                    <h1 class="be-ready__title">Prêt pour un changement de vie ?</h1>
+                    <div class="be-ready__content">
+                        <div class="be-ready__text">
+                            <p class="be-ready__paragraph be-ready__paragraph_top"> <strong>Suivez vos cours à votre rythme</strong><br/> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut, tenetur quasi. Aut, neque earum? Ipsum eius deserunt.</p>  
+                            <p class="be-ready__paragraph be-ready__paragraph_middle"><strong>Des exercices concrets à réaliser</strong><br/>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem blanditiis quam voluptates sunt rerum tempora soluta. </p>  
+                            <p class="be-ready__paragraph be-ready__paragraph_bottom"><strong>Passez à l’apprentissage hybride</strong><br/>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet molestiae, voluptas ducimus facilis cum in consequatur suscipit.</p>  
+                        </div>  
+                        <div class="be-ready__image">
+                            <img src="images/be_ready/illustration-ready .svg" alt="illustration etre pret">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="all-you-need">
+                <div class="all-you-need__container all-you-need__container_fullscreen">
+                    <h1 class="all-you-need__title">Une plateforme qui accompagne vos besoins</h1>
+                    <div class="all-you-need__content">
+                        <div class="all-you-need__content-description all-you-need__content-description_top content-description">
+                            <div class="content-description__image">
+                                <img class="content-description__image" src="images/all_you_need/u_need_icone1.svg" alt="image formations a venir">
+                            </div>
+                            <div class="content-description__text">
+                                <h2 class="content-description__title">Formations d’avenir</h2>
+                                <p class="content-description__paragraph">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo harum deserunt nihil maxime excepturi culpa explicabo perspiciatis nobis, ratione facere !</p>
+                            </div>
+                        </div>
+                        <div class="all-you-need__content-description all-you-need__content-description_middle content-description">
+                            <div class="content-description__image">
+                                <img src="images/all_you_need/u_need_icone2.svg" alt="image c'est simple et clair">
+                            </div>
+                            <div class="content-description__text">
+                                <h2 class="content-description__title">Simple, clair, efficace</h2>
+                                <p class="content-description__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima doloribus non dolor soluta iure cum nemo neque molestias.</p>
+                            </div>
+                        </div>
+                        <div class="all-you-need__content-description all-you-need__content-description_bottom content-description">
+                            <div class="content-description__image">
+                                <img src="images/all_you_need/u_need_icone3.svg" alt="image ensemble">
+                            </div>
+                            <div class="content-description__text">
+                                <h2 class="content-description__title">Seul, mais ensemble !</h2>
+                                <p class="content-description__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur quaerat soluta quam accusamus nisi magnam deleniti eligendi.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="connect-you" id="connexion-page-block">
+                <div class="connect-you__container connect-you__container_fullscreen">
+                    <form class="connexion-form" method="post" action="" >
+                        <h3 class="connexion-form__header">Se connecter</h3>
+                        <div class="connexion-form__body">
+                            <div class="connexion-form__content form-content">
+                                <div class="form-content__email">
+                                    <label for="email">E-mail</label> <br/>
+                                    <input type="email" id="email" name="email" placeholder="Texte" required/>
+                                </div>
+                                <div class="form-content__password">
+                                    <label for="password">Mot de passe</label> <br/>
+                                    <input type="password" id="connexion-form-password" name="password" placeholder="Texte" required/>
+                                    <div class="eye eye-slashed"><span></span></div>
+                                </div>
+                                <div class="form-content__remember-me"> 
+                                    <input type="checkbox" id="remember-me" value="remember-me" name="remember-me" checked>
+                                    <label for="remember-me">Se souvenir de moi</label>
+                                    <a class="form-content__forgotten-password" href="#">Mot de passe oublié ?</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="connexion-form__footer">
+                            <input class="submit buttons" type="submit" value="Valider">
+                            <div class="create-account">
+                                <h4>Pas encore de compte ?</h4>
+                                <a href="#">S'inscrire</a>
+                            </div>
+                        </div> 
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="footer__container">
+                <div class="footer__logo">
+                    <img src="images/header/logo.png" alt="logo" width="136">
+                </div>
+                <div class="footer__links">
+                    <a href="#">Connexion</a>
+                    <a href="#">Aide</a>
+                    <a href="#">Nos formations</a>
+                    <a href="#">Mentions Légales</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,89 @@
+
+
+// Responsive breakpoints mixin
+
+// @mixin for-mobiles-only-Hack {
+//     @media (max-width: 639px) {@content;}
+// }
+// @mixin for-mobile-L {
+//     @media (min-width: 425px) {@content;}  //small mobile L
+// }
+// @mixin for-tablet {
+//     @media (min-width: 640px) {@content;} //medium tablet
+// }
+// @mixin for-desktop {
+//     @media (min-width: 1024px) {@content;} //large laptop
+// }
+// @mixin for-L-screen {
+//     @media (min-width: 1440px) {@content;} //xlarge desktop
+// }
+// @mixin for-4K {
+//     @media (min-width: 2560px) {@content;} //xxlarge wide
+// }
+
+// @mixin for-hover-devices {
+//     @media (hover: hover) {@content;}
+// }
+
+
+
+
+// $default_width: 1440px;
+// $max_content_width: 2560px;
+
+$breakpoint_xsmall: 425px;
+$breakpoint_small: 640px;
+$breakpoint_medium: 1024px;
+$breakpoint_large: 1440px;
+$breakpoint_xlarge: 2560px;
+
+
+@mixin mobile-only{
+    @media only screen and (max-width: #{$breakpoint_small - 1}) {
+        @content;
+    }
+}
+@mixin tablet {
+    @media only screen and (min-width: #{$breakpoint_small}) {
+        @content;
+    }
+}
+@mixin tablet-only {
+    @media only screen and (max-width: #{$breakpoint_medium - 1}) {
+        @content;
+    }
+}
+@mixin laptop {
+    @media only screen and (min-width: #{$breakpoint_medium}) {
+        @content;
+    }
+}
+@mixin laptop-only {
+    @media only screen and (max-width: #{$breakpoint_large - 1}) {
+        @content;
+    }
+}
+@mixin desktop {
+    @media only screen and (min-width: #{$breakpoint_large}) {
+        @content;
+    }
+}
+@mixin desktop-only {
+    @media only screen and (max-width: #{$breakpoint_xlarge - 1}) {
+        @content;
+    }
+}
+@mixin wide-screen {
+    @media only screen and (min-width: #{$breakpoint_xlarge}) {
+        @content;
+    }
+}
+@mixin wide-screen-only {
+    @media only screen and (min-width: #{$breakpoint_xlarge + 1}) {
+        @content;
+    }
+}
+
+@mixin hover-devices {
+    @media (hover: hover) {@content;}
+}

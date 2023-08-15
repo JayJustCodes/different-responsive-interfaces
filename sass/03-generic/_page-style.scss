@@ -1,0 +1,27 @@
+/**
+ * General Website Style rules
+*/
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    box-sizing: border-box;
+    margin: 0;
+    
+    font-family: var(--global--font-primary);    
+    font-size: 16px; 
+    font-weight: 400;
+    color: var(--global--vert-foret-sombre-100);
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}

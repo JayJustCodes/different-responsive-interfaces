@@ -1,0 +1,155 @@
+@use '../02-tools/mixins';
+@use '../03-generic/breakpoints';
+
+/**
+ * "All you need" block
+*/
+
+.all-you-need {
+
+    background-color: var(--global--pomme-granny-80);
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 70px;
+        // align-items: center;
+
+        max-width: 1188px; /*fallback*/
+        max-width: 83.369%; 
+        margin: 0 auto;
+        // padding: 0px 50px 0px 50px;
+        padding: 50px;
+
+        @include breakpoints.tablet-only {
+            // padding: 50px 20px 0px 150px;
+            padding: 100px 20px 50px 150px;
+        }
+        @include breakpoints.mobile-only {
+            // padding: 50px 15px 0px 15px;
+            padding: 50px 15px 50px 15px;
+
+        }
+
+        &_fullscreen {
+            min-height: 100vh;
+        }
+
+    }
+
+    &__title {
+        margin: 0;
+        text-align: center;
+
+        @include mixins.display-H1;
+        @include breakpoints.tablet-only {
+           font-size: 2.5rem;
+        }
+        @include breakpoints.mobile-only {
+            font-size: 1.4rem;
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+
+        @include breakpoints.laptop-only {
+            gap: 15px;
+        }
+        @include breakpoints.tablet-only {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 36px;
+            grid-template-areas:
+                "courses ."
+                "courses simple"
+                "together simple"
+                "together .";
+        }
+        @include breakpoints.mobile-only {
+            grid-template-columns: 1fr;
+            grid-template-areas:
+                "courses"
+                "simple"
+                "together";
+            }
+
+        &-description {
+            // border: yellow solid;
+
+            &_top {
+                grid-area: courses;
+            }
+            &_middle {
+                grid-area: simple;
+            }
+            &_bottom {
+                grid-area: together;
+            }
+        }
+    }
+
+}
+
+.content-description {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 50px;
+
+    &__image {
+        width: 88px;
+        // height: 84px;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        border-radius: 12px; 
+
+        background-color: #D6F0C4;
+        min-width: 350px;
+        min-height: 314px;
+
+        @include breakpoints.laptop-only {
+            min-width: 300px;
+        }
+        @include breakpoints.tablet-only {
+            min-width: 100%;
+        }
+    }
+
+    &__title {
+        color: var(--vert-fort-sombre-100);
+        text-align: center;
+        max-width: 310px;
+
+        @include mixins.display-H2;
+    }
+
+    &__paragraph {
+        color: #404E53;
+        text-align: center;
+        max-width: 310px;
+
+        @include mixins.display-paragraph;
+        @include breakpoints.laptop-only {
+            max-width: 290px;
+            font-size: 1.17rem;
+        }
+        @include breakpoints.tablet-only {
+            font-size: 1.1rem;
+        }
+    }
+}
