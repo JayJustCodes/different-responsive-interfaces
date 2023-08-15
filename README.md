@@ -1,6 +1,4 @@
 # :link: [Different responsive interfaces](https://jays-v.github.io/different-responsive-interfaces) 
-![GitHub repo size](https://img.shields.io/github/repo-size/JayS-v/different-responsive-interfaces)
-
 
 ## Built With
 
