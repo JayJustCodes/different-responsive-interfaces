@@ -214,6 +214,12 @@ body {
   justify-content: center;
   margin: 0;
 }
+@media only screen and (max-width: 1023px) {
+  .navigation-menu__title {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
 @media only screen and (max-width: 639px) {
   .navigation-menu__title {
     position: fixed;
@@ -288,9 +294,11 @@ body {
   background-image: url(../images/header/icone_aide_white.svg);
 }
 
-@media only screen and (max-width: 1023px) {
-  .dropdown-checkbox1:checked ~ .navigation-menu__title .navigation-menu__link, .dropdown-checkbox2:checked ~ .navigation-menu__title .navigation-menu__link, .dropdown-checkbox3:checked ~ .navigation-menu__title .navigation-menu__link {
-    color: var(--global--pomme-granny-100);
+@media only screen and (max-width: 1023px) and (max-width: 1023px) {
+  .dropdown-checkbox1:checked ~ .navigation-menu__title, .dropdown-checkbox2:checked ~ .navigation-menu__title, .dropdown-checkbox3:checked ~ .navigation-menu__title {
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 0.5s ease-in-out;
   }
 }
 @media only screen and (max-width: 1023px) and (max-width: 639px) {
@@ -1035,6 +1043,11 @@ body {
   right: 0;
   transform: translate(-24px, 46px);
 }
+@media only screen and (max-width: 639px) {
+  .eye-slashed {
+    transform: translate(-24px, 32px);
+  }
+}
 .eye-slashed span::after {
   content: "";
   background-image: url(../images/connect_you/connexion_form/eye-slashed.png);
@@ -1053,6 +1066,11 @@ body {
   top: 0;
   right: 0;
   transform: translate(-24px, 48px);
+}
+@media only screen and (max-width: 639px) {
+  .eye-open {
+    transform: translate(-24px, 34px);
+  }
 }
 .eye-open span::after {
   content: "";

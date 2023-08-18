@@ -180,6 +180,12 @@
         justify-content: center;
         margin: 0;
 
+        @include breakpoints.tablet-only {
+            //to hide if not checked
+            opacity: 0; 
+            transform: translateX(-100px);
+        }
+
         @include breakpoints.mobile-only {
             position: fixed;
             
@@ -252,10 +258,16 @@
     .dropdown-checkbox {
         &1, &2, &3 {
 
-            &:checked ~ .navigation-menu__title .navigation-menu__link {
-                color: var(--global--pomme-granny-100);
+            // &:checked ~ .navigation-menu__title .navigation-menu__link {
+            //     color: var(--global--pomme-granny-100);
+            // }
+            @include breakpoints.tablet-only {
+                &:checked ~ .navigation-menu__title {
+                    opacity: 1;
+                    transform: translateX(0);
+                    transition: all 0.5s ease-in-out;
+                }
             }
-
             @include breakpoints.mobile-only {
                 &:checked ~ .navigation-menu__title {
                     opacity: 1;
