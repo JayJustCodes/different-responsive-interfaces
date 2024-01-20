@@ -1037,44 +1037,18 @@ body {
   text-decoration: none;
 }
 
-.eye-slashed {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-24px, 46px);
-}
-@media only screen and (max-width: 639px) {
-  .eye-slashed {
-    transform: translate(-24px, 32px);
-  }
-}
 .eye-slashed span::after {
   content: "";
-  background-image: url(../images/connect_you/connexion_form/eye-slashed.png);
-  background-size: 20px;
-  background-repeat: no-repeat;
-  position: absolute;
-  display: block;
-  width: 20px;
-  height: 20px;
-  cursor: pointer;
+  background-image: url(../../images/connect_you/connexion_form/eye-slashed.png);
 }
 
-/*used by JS on click*/
-.eye-open {
-  position: absolute;
-  top: 0;
-  right: 0;
-  transform: translate(-24px, 48px);
-}
-@media only screen and (max-width: 639px) {
-  .eye-open {
-    transform: translate(-24px, 34px);
-  }
-}
 .eye-open span::after {
   content: "";
-  background-image: url(../images/connect_you/connexion_form/eye-open.png);
+  background-image: url(../../images/connect_you/connexion_form/eye-open.png);
+}
+
+.eye-slashed span::after,
+.eye-open span::after {
   background-size: 20px;
   background-repeat: no-repeat;
   position: absolute;
@@ -1082,6 +1056,14 @@ body {
   width: 20px;
   height: 20px;
   cursor: pointer;
+  right: 0;
+  bottom: 12px;
+}
+@media only screen and (max-width: 639px) {
+  .eye-slashed span::after,
+  .eye-open span::after {
+    bottom: -12px;
+  }
 }
 
 .create-account {

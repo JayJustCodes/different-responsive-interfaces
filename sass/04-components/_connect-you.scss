@@ -179,55 +179,31 @@
 
 }
 
-.eye-slashed {
-    position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(-24px, 46px);
-
-    @include breakpoints.mobile-only {
-        transform: translate(-24px, 32px);
-    }
-
-    span::after {
-        content: '';
-            background-image: url(../images/connect_you/connexion_form/eye-slashed.png);
-            background-size: 20px;
-            background-repeat: no-repeat;
-    
-            position: absolute;
-            display: block;
-            width: 20px;
-            height: 20px;
-
-            cursor: pointer;
-    }
+.eye-slashed span::after {
+    content: '';
+    background-image: url(../../images/connect_you/connexion_form/eye-slashed.png);
 }
 
-/*used by JS on click*/
+.eye-open span::after {
+    content: '';
+    background-image: url(../../images/connect_you/connexion_form/eye-open.png);  
+}
 
-.eye-open {
+.eye-slashed span::after,
+.eye-open span::after {
+    background-size: 20px;
+    background-repeat: no-repeat;
     position: absolute;
-    top: 0;
+    display: block;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+
     right: 0;
-    transform: translate(-24px, 48px);
+    bottom: 12px;
 
     @include breakpoints.mobile-only {
-        transform: translate(-24px, 34px);
-    }
-
-    span::after {
-        content: '';
-            background-image: url(../images/connect_you/connexion_form/eye-open.png);
-            background-size: 20px;
-            background-repeat: no-repeat;
-    
-            position: absolute;
-            display: block;
-            width: 20px;
-            height: 20px;
-
-                cursor: pointer;
+        bottom: -12px;
     }
 }
 

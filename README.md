@@ -12,7 +12,7 @@
 ├── index.html                          
 ├── Readme.md                         
 ├── images
-├── css                                                                              
+├── public                                                                              
 └── sass                                              
     └── 01-settings
         └── _global.scss
