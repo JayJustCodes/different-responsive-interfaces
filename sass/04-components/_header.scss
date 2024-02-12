@@ -109,7 +109,7 @@
 
             &::before {
                 content: "";
-                background-image: url(../images/header/logo-website-favicon-color.png);
+                background-image: url(../../images/header/logo-website-favicon-color.png);
                 background-size: 60px;
                 background-repeat: no-repeat;
                 display: block;
@@ -245,13 +245,13 @@
 }
 
 .dropdown-icon-connexion::before  {
-    background-image: url(../images/header/icone_connexion_transparent.png);
+    background-image: url(../../images/header/icone_connexion_transparent.png);
 }
 .dropdown-icon-courses::before  {
-    background-image: url(../images/header/icone_formations_white.svg);
+    background-image: url(../../images/header/icone_formations_white.svg);
 }
 .dropdown-icon-help::before  {
-    background-image: url(../images/header/icone_aide_white.svg);
+    background-image: url(../../images/header/icone_aide_white.svg);
 }
 
 @include breakpoints.tablet-only {
