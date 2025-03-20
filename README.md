@@ -1,4 +1,4 @@
-# :link: [Different responsive interfaces](https://jays-v.github.io/different-responsive-interfaces) 
+# :link: [Different responsive interfaces](https://jayjustcodes.github.io/different-responsive-interfaces)
 
 ## Built With
 
